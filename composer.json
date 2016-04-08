@@ -1,0 +1,129 @@
+{
+    "name" 			: "knowthecode/fulcrum",
+    "description" 	: "Fulcrum Plugin - The customization center to extend and custom WordPress. This plugin provides the centralized infrastructure for the custom plugins and theme.",
+    "type"          : "project",
+    "keywords" 		: ["wordpress", "wp", "plugin"],
+    "homepage" 		: "https://knowthecode.io",
+    "license" 		: "GPL-2.0+",
+    "authors": [
+        {
+            "name" 	: "hellofromTonya",
+            "email" : "hellofromtonya@knowthecode.io"
+        }
+    ],
+    "require": {
+        "php" : ">=5.4.0",
+        "pimple/pimple" : "~3.0",
+        "nesbot/carbon": "~1.20"
+    },
+    "require-dev": {
+        "raveren/kint" : "~1.0",
+        "mockery/mockery": "~0.9",
+        "filp/whoops": "~2.0"
+    },
+    "autoload" : {
+        "classmap": [
+            "src/class-fulcrum.php",
+            "src/i-fulcrum-contract.php",
+
+            "src/addon/class-addon.php",
+
+            "src/asset/class-asset.php",
+            "src/asset/class-asset-provider.php",
+            "src/asset/i-asset-contract.php",
+            "src/asset/repo/class-script.php",
+            "src/asset/repo/class-style.php",
+
+            "src/config/class-config.php",
+            "src/config/class-factory.php",
+            "src/config/i-config-contract.php",
+
+            "src/container/class-container.php",
+            "src/container/i-container-contract.php",
+
+            "src/custom/meta/class-metabox.php",
+            "src/custom/meta/class-metabox-provider.php",
+            "src/custom/meta/i-metabox-contract.php",
+
+            "src/custom/post-type/class-post-type.php",
+            "src/custom/post-type/class-post-type-supports.php",
+            "src/custom/post-type/class-post-type-provider.php",
+            "src/custom/post-type/i-post-type-contract.php",
+            "src/custom/post-type/permalink/class-custom-permalink.php",
+            "src/custom/post-type/permalink/class-permalink-provider.php",
+            "src/custom/post-type/permalink/class-permalink-query.php",
+            "src/custom/post-type/permalink/class-post-name-slug.php",
+
+            "src/custom/shortcode/class-shortcode.php",
+            "src/custom/shortcode/class-shortcode-provider.php",
+            "src/custom/shortcode/i-shortcode-contract.php",
+
+            "src/custom/taxonomy/class-taxonomy.php",
+            "src/custom/taxonomy/class-taxonomy-provider.php",
+            "src/custom/taxonomy/i-taxonomy-contract.php",
+
+            "src/custom/template/class-template.php",
+            "src/custom/template/class-template-provider.php",
+
+            "src/custom/widget/class-widget.php",
+            "src/custom/widget/class-widget-provider.php",
+            "src/custom/widget/i-widget-contract.php",
+
+            "src/foundation/class-ajax.php",
+            "src/foundation/class-base.php",
+            "src/foundation/service-provider/class-handler.php",
+            "src/foundation/service-provider/class-provider.php",
+            "src/foundation/service-provider/i-provider-contract.php",
+
+            "src/security/class-login-form.php",
+
+            "src/support/exceptions/class-binding-resolution.php",
+            "src/support/exceptions/class-configuration.php",
+
+            "src/support/helpers/class-arr.php",
+            "src/support/helpers/class-str.php",
+
+            "src/database/class-db-helpers.php",
+            "src/database/class-schema.php",
+            "src/database/class-schema-provider.php",
+            "src/database/i-db-helpers-contract.php",
+            "src/model/class-model.php",
+            "src/model/class-post-model.php",
+            "src/model/class-model-cleaner.php",
+            "src/model/i-model-contract.php",
+            "src/model/i-post-model-contract.php",
+            "src/foundation/pagination/class-pagination.php",
+            "src/foundation/pagination/i-pagination-contract.php"
+        ],
+        "files": [
+            "src/custom/meta/helpers.php",
+            "src/custom/post-type/helpers.php",
+            "src/custom/taxonomy/helpers.php",
+            "src/custom/template/helpers.php",
+
+            "src/security/helpers.php",
+
+            "src/support/helpers/admin-helpers.php",
+            "src/support/helpers/arr-helpers.php",
+            "src/support/helpers/date-time-helpers.php",
+            "src/support/helpers/helpers.php",
+            "src/support/helpers/plugin-helpers.php",
+            "src/support/helpers/str-helpers.php"
+        ]
+    },
+    "autoload-dev" : {
+        "classmap": [
+            "src/support/exceptions/class-whoops-displayer.php",
+            "src/support/exceptions/i-exception-displayer-contract.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "vendor-dir": "assets/vendor"
+    },
+    "minimum-stability": "dev"
+}
